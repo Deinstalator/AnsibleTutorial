@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Update repository index
+    dnf:
+      update_cache: yes
+
+  - name: Install apache2
+    dnf:
+      name: httpd
